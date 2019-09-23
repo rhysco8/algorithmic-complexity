@@ -8,5 +8,9 @@ describe AlgorithmTimer do
     it "returns [1] when passed [1]" do
       expect(@timer.custom_reverse([1])).to eq([1])
     end
+
+    it "returns [2, 1] when passed [1, 2]" do
+      expect(@timer.custom_reverse([1, 2])).to eq([2, 1])
+    end
   end
 end
