@@ -4,7 +4,7 @@ INPUT_SIZE_INCREMENT = 5_000
 
 def code_timer
   timings_hash = Hash.new
-  51.times do
+  81.times do
     input_size = INPUT_SIZE_LOWER_LIMIT
     while input_size <= INPUT_SIZE_UPPER_LIMIT
       testing_array = (1..input_size).to_a
@@ -16,17 +16,18 @@ def code_timer
   print_timings(timings_hash)
 end
 
+private
+
 def add_to_timings_hash(timings_hash, input_size, time_taken)
   if timings_hash.has_key?(input_size)
     timings_hash[input_size].push time_taken
   else
     timings_hash[input_size] = [time_taken]
   end
-  return timings_hash
 end
 
 def median_value(timings_array)
-  return timings_array.sort[25]
+  return timings_array.sort[40]
 end
 
 def time_taken_to_run_algorithm(testing_array)
