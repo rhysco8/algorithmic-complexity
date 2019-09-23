@@ -18,6 +18,10 @@ class AlgorithmTimer
     print_timings(timings_hash)
   end
 
+  def custom_reverse(array)
+    [1]
+  end
+
   private
 
   def add_to_timings_hash(timings_hash, input_size, time_taken)
