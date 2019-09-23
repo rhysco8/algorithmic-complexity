@@ -4,10 +4,10 @@ INPUT_SIZE_INCREMENT = 5_000
 
 def code_timer
   timings_hash = Hash.new
-  10.times do
+  51.times do
     input_size = INPUT_SIZE_LOWER_LIMIT
     while input_size <= INPUT_SIZE_UPPER_LIMIT
-      testing_array = *(1..input_size)
+      testing_array = (1..input_size).to_a
       time_taken = time_taken_to_run_algorithm(testing_array)
       add_to_timings_hash(timings_hash, input_size, time_taken)
       input_size += INPUT_SIZE_INCREMENT
@@ -25,8 +25,8 @@ def add_to_timings_hash(timings_hash, input_size, time_taken)
   return timings_hash
 end
 
-def average_of_timings(timings_array)
-  return timings_array.sum.fdiv(timings_array.size)
+def median_value(timings_array)
+  return timings_array.sort[25]
 end
 
 def time_taken_to_run_algorithm(testing_array)
@@ -38,7 +38,7 @@ end
 
 def print_timings(timings_hash)
   timings_hash.each do |size, timings_array|
-    puts "#{size}: #{average_of_timings(timings_array)}"
+    puts "#{size}: #{median_value(timings_array)}"
   end
 end
 
