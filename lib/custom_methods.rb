@@ -8,6 +8,13 @@ module CustomMethods
   end
 
   def custom_shuffle(array)
-    [1]
+    shuffled_array = []
+    until array.empty?
+      random_element_index = rand(0..array.size - 1)
+      randomly_chosen_element = array[random_element_index]
+      shuffled_array.push randomly_chosen_element
+      array.delete_at(random_element_index)
+    end
+    return shuffled_array
   end
 end

@@ -21,5 +21,9 @@ describe CustomMethods do
     it "returns [1] when passed [1]" do
       expect(dummy_class.custom_shuffle([1])).to eq([1])
     end
+
+    it "returns shuffled array when passed [1, 2, 3, 4]" do
+      expect(dummy_class.custom_shuffle([1, 2, 3, 4])).to_not eq([1, 2, 3, 4])
+    end
   end
 end
