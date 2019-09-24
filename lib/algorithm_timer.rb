@@ -22,14 +22,6 @@ class AlgorithmTimer
     print_timings(timings_hash)
   end
 
-  def custom_reverse(array)
-    reverse_array = []
-    array.each do |element|
-      reverse_array.prepend(element)
-    end
-    return reverse_array
-  end
-
   private
 
   def add_to_timings_hash(timings_hash, input_size, time_taken)

@@ -12,6 +12,22 @@ describe AlgorithmTimer do
       it ".reverse" do
         expect{ @timer.time_algorithm('reverse') }.to output(table_of_timings).to_stdout
       end
+
+      it ".last" do
+        expect{ @timer.time_algorithm('last') }.to output(table_of_timings).to_stdout
+      end
+
+      it ".shuffle" do
+        expect{ @timer.time_algorithm('shuffle') }.to output(table_of_timings).to_stdout
+      end
+
+      it ".sort" do
+        expect{ @timer.time_algorithm('sort') }.to output(table_of_timings).to_stdout
+      end
+
+      it "#custom_reverse" do
+        expect{ @timer.time_algorithm('custom_reverse') }.to output(table_of_timings).to_stdout
+      end
     end
   end
 end
