@@ -1,4 +1,8 @@
+require 'custom_methods'
+
 class AlgorithmTimer
+  include CustomMethods
+
   INPUT_SIZE_LOWER_LIMIT = 5_000
   INPUT_SIZE_UPPER_LIMIT = 100_000
   INPUT_SIZE_INCREMENT = 5_000
