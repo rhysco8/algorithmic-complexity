@@ -16,4 +16,10 @@ describe CustomMethods do
       expect(dummy_class.custom_reverse([1, 2, 3])).to eq([3, 2, 1])
     end
   end
+
+  describe '#custom_shuffle' do
+    it "returns [1] when passed [1]" do
+      expect(dummy_class.custom_shuffle([1])).to eq([1])
+    end
+  end
 end

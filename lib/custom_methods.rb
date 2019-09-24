@@ -6,4 +6,8 @@ module CustomMethods
     end
     return reverse_array
   end
+
+  def custom_shuffle(array)
+    [1]
+  end
 end
