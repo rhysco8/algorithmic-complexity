@@ -63,6 +63,8 @@ class AlgorithmTimer
       testing_array.shuffle
     when 'sort'
       testing_array.sort
+    when 'custom_reverse'
+      custom_reverse(testing_array)
     end
   end
 end
