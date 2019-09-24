@@ -19,11 +19,11 @@ class AlgorithmTimer
   end
 
   def custom_reverse(array)
-    if array.size == 1
-      [1]
-    else
-      [2, 1]
+    reverse_array = []
+    array.each do |element|
+      reverse_array.prepend(element)
     end
+    return reverse_array
   end
 
   private
